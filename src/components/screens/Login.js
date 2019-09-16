@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity } from "react-native"
 class Login extends Component {
 
   login() {
-    alert('pressed')
+    this.props.navigation.navigate('feed')
   }
 
   render() {
