@@ -1,31 +1,53 @@
 import React, { Component } from "react"
-import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native"
+import { View, Text, TextInput, Button, StyleSheet } from "react-native"
 
 class Register extends Component {
 
+  constructor() {
+    super()
+    this.state = {
+      credentials: {
+        email: "",
+        password: ""
+      }
+    }
+  }
+
+  updateText(text, field) {
+    let newCredentials = Object.assign(this.state.credentials)
+    newCredentials[field] = text
+    // this.setState({
+    //   credentials: newCredentials
+    // })
+  }
+
   register() {
-    this.props.navigation.navigate('feed')
+    alert(JSON.stringify(this.state.credentials))
   }
 
   render() {
     return (
-      <View style={ styles.screen }
-        onPress={() => {
-          this.register()
-        }}
+      <View 
+        style={ styles.screen }
       >
         
         <Text>Register Page</Text>
         <TextInput
-          placeholder="USERNAME"
+          value={this.state.login}
+          onChangeText={(text) => this.updateText(text, 'email')}
+          placeholder="EMAIL"
           style={styles.input}
+          autoCorrect={false}
         />
         <TextInput
+          value={this.state.password}
+          onChangeText={(text) => this.updateText(text, 'password')}
           placeholder="PASSWORD"
           style={[styles.input, {marginBottom: 20}]}
+          autoCorrect={false}
           secureTextEntry
         />
-        <Button title="SignUp" onPress={() => Alert.alert('Simple Button pressed')}/>
+        <Button title="SignUp" onPress={() => this.register()}/>
       </View>
     )
   }
