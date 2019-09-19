@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, TextInput, Button } from "react-native"
 class Camera extends Component {
 
   login() {
-    this.props.navigation.navigate('feed')
+    this.props.navigation.navigate('register')
   }
 
   render() {
@@ -15,7 +15,7 @@ class Camera extends Component {
         }}
       >
         
-        <Text>Login</Text>
+        <Text>New User?</Text>
       </TouchableOpacity>
     )
   }
