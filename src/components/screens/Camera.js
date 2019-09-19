@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { View, Text, TouchableOpacity, TextInput, Button } from "react-native"
+import { View, Text, TouchableOpacity } from "react-native"
 
 class Camera extends Component {
 
@@ -15,7 +15,7 @@ class Camera extends Component {
         }}
       >
         
-        <Text>Login</Text>
+        <Text>Future Camera Page</Text>
       </TouchableOpacity>
     )
   }

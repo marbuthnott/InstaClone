@@ -2,11 +2,12 @@ import React, { Component } from "react"
 // import AppNavigator from "./components/navigation/MainTabNavigator"
 import { createAppContainer } from "react-navigation"
 import { createBottomTabNavigator } from "react-navigation-tabs"
-import { MainFeed, Login } from "./components/screens"
+import { MainFeed, Profile, Camera } from "./components/screens"
 
 const TabNavigator = createBottomTabNavigator({
-  login: Login,
-  feed: MainFeed
+  feed: MainFeed,
+  camera: Camera,
+  profile: Profile
 })
 
 const AppNavigator = createAppContainer(TabNavigator)

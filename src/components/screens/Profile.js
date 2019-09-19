@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-import { View, Text, TouchableOpacity, TextInput, Button } from "react-native"
+import { View, Text, TouchableOpacity } from "react-native"
 
-class Camera extends Component {
+class Profile extends Component {
 
   login() {
     this.props.navigation.navigate('feed')
@@ -15,10 +15,10 @@ class Camera extends Component {
         }}
       >
         
-        <Text>Login</Text>
+        <Text>Future Profile Page</Text>
       </TouchableOpacity>
     )
   }
 }
 
-export default Camera
+export default Profile
